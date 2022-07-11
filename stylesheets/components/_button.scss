@@ -1,0 +1,14 @@
+
+@use '../abstracts/' as *;
+.btn {
+   color: white;
+   font-weight: 500;
+   background: $orange-gradient;
+   padding: 12px 20px; 
+   display: inline-block;
+   font-size: 14px;
+   transition: 0.3s;
+   &:hover {
+      opacity: 0.85;
+   }
+}

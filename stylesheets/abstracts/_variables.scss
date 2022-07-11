@@ -1,0 +1,16 @@
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$orange-gradient: linear-gradient(90deg, rgba(250,204,36,1) 0%, rgb(245, 125, 56) 100%);
+$blue-heavy: #272242;
+$blue-light: #413586;
+$orange-heavy: #f57d38;
+$orange-middle: #ffbf00;
+$orange-light: #fed345;
+$black-db: #333;
+
+$section-padding: 50px;

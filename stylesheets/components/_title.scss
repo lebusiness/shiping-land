@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+
+.title {
+    font-size: 40px;
+    color: $orange-middle;
+    position: relative;
+    &::before {
+        z-index: -1;
+        color: $orange-middle;
+        content: '01';
+        position: absolute;
+        top: -20px;
+        left: -10px;
+        opacity: 0.3;
+    }
+    @media (max-width: map-get($container-max-widths, lm)) {
+        font-size: 35px;
+    }
+    @media (max-width: map-get($container-max-widths, md)) {
+        font-size: 30px;
+    }
+}
+
+

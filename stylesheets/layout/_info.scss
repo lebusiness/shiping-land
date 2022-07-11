@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.info {
+    padding: $section-padding 0;
+    &__paragraph {
+        margin-top: 40px;
+        font-weight: 300;
+        line-height: 1.5;
+        font-size: 16px;
+        @media (max-width: map-get($container-max-widths, md)) {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+    }
+}

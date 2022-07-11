@@ -1,0 +1,141 @@
+@use '../abstracts' as *;
+
+.header {
+    &__contact-wrapper {
+        background: $blue-heavy;
+        color: #e6e6e6;
+        font-weight: 500;	
+        font-size: 11px;
+        box-shadow: 0px 1px 5px 1px rgba(34, 60, 80, 0.3);
+        &-container {
+            padding: 10px 0;
+            @include flex(row, space-between, center);
+            @media (max-width: map-get($container-max-widths, md)) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__text {
+        flex: 1.7;
+        font-weight: 400;
+        font-size: 14px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            flex: 1;
+        }
+    }
+    &__contact {
+        flex: 1;
+        text-align: right;
+        img {
+            transform: translateY(2px);
+            margin-right: 5px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            margin-top: 5px;
+        }
+    }
+
+    &__info {
+        padding: 20px 0;
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        @media (max-width: map-get($container-max-widths, sm)) {
+            flex-wrap: wrap-reverse;
+            padding: 10px 0;
+        }
+        &-item {
+            color: $orange-heavy;
+            & + & {
+                justify-content: flex-end;
+            }
+            flex: 0.3;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                flex: 0.5;
+            }
+            @media (max-width: map-get($container-max-widths, md)) {
+                flex: 1;
+            }
+            @include flex(row, flex-start, center);
+            @media (max-width: map-get($container-max-widths, md)) {
+                margin-top: 10px;
+                width: 50%;
+            }
+            &-img {
+                border-radius: 3px;
+                height: 28px;
+                background: $orange-gradient;
+                padding: 10px;
+                display: block;
+            }
+            &-wrapper {
+                font-size: 12px;
+                font-weight: 400;
+                margin-left: 12px;
+                font-weight: #333;
+                @include flex(column, space-between, flex-start);
+            }
+            &-desc {
+                font-weight: 500;
+                color: $blue-light;
+            }
+        }
+    }
+    &__photo {
+        flex: 1;
+        justify-self: flex-start;
+        text-align: left;
+        @media (max-width: map-get($container-max-widths, sm)) {
+            order: 1;
+            width: 100%;
+        }
+    }
+    &__nav {
+        border-radius: 6px 6px 0 0;
+        background: $blue-light;
+        border-top: 2px solid #272242; 
+        color: white;
+        font-weight: 500;
+    }
+    &__menu {
+        display: grid;
+        grid-auto-flow: column;
+        height: 100%;
+        @media (max-width: map-get($container-max-widths, md)) {
+            grid-auto-flow: row;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &-item {
+            width: 70%;
+            display: inline-block;
+            padding: 20px;
+            text-align: center;
+            justify-self: center;
+            position: relative;
+            align-self: center;
+            @media (max-width: map-get($container-max-widths, md)) {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 14px;
+            }
+            border-bottom: 3px solid #fed34500;
+            transition: 0.3s;
+            &:hover {
+                cursor: pointer;
+                border-bottom: 3px solid #fed345;
+                @media (max-width: map-get($container-max-widths, md)) {
+                    border-bottom: 2px solid #fed345;
+                }
+            }
+        }
+    }
+}
+.menu-item--active {
+    border-bottom: 3px solid #fed345;
+    @media (max-width: map-get($container-max-widths, md)) {
+        border-bottom: 2px solid #fed345;
+    }
+}
