@@ -1,3 +1,3 @@
-# shiping
+# shipping
 
-[github-pages (https://lebusiness.github.io/shiping-land/)](https://lebusiness.github.io/shiping-land/)
+[github-pages (https://lebusiness.github.io/shipping-land/)](https://lebusiness.github.io/shipping-land/)
